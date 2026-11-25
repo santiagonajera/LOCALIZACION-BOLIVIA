@@ -6,6 +6,7 @@ Ejemplo didáctico de **Clustering aplicado a la logística de Bolivia**: ubicac
 
 | Archivo | Descripción |
 |---|---|
+| `GUIA_PASO_A_PASO.md` | 📖 **Guía paso a paso**: explica qué hace el código y por qué (empezar aquí) |
 | `Clusters_Bolivia_Ejemplo.ipynb` | Notebook principal para Google Colab / Jupyter |
 | `codigo_bolivia_clustering.py` | Mismo ejemplo como script de Python (para correr en PC) |
 | `coordenadas_bolivia_1000_puntos.txt` | Dataset: 1,000 localidades de Bolivia con coordenadas y demanda anual en pallets |
@@ -36,6 +37,8 @@ El script genera: `codo_bolivia.png` (método del codo), `asignaciones_bolivia.c
 3. **K-Means ponderado**: la demanda entra como `sample_weight` — los puntos con más pallets "jalan" más el centro del cluster.
 4. **Distancias Haversine**: distancias reales en km sobre la superficie terrestre.
 5. **Mapa interactivo (Folium)**: clientes, clusters y centros de distribución de Bolivia.
+
+La explicación detallada de cada paso está en la [guía paso a paso](GUIA_PASO_A_PASO.md).
 
 ## 📊 Resultado esperado
 
