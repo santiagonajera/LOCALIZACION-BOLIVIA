@@ -1,13 +1,15 @@
-# Localización Óptima de Centros de Distribución en Bolivia 🇧🇴
+# Localización Óptima de Centros de Distribución en Bolivia mediante Clustering 🇧🇴
 
-Ejemplo didáctico de **Machine Learning aplicado a logística**: ubicación de centros de distribución (CD) en Bolivia usando **K-Means ponderado por demanda**.
+Ejemplo didáctico de **Clustering aplicado a la logística de Bolivia**: ubicación de centros de distribución (CD) usando **K-Means ponderado por demanda**.
 
 ## 📁 Contenido
 
 | Archivo | Descripción |
 |---|---|
-| `Clusters_Bolivia_Ejemplo.ipynb` | Notebook principal (Google Colab / Jupyter) |
-| `coordenadas_bolivia_1000_puntos.txt` | Dataset: 1,000 localidades con coordenadas y demanda anual en pallets |
+| `Clusters_Bolivia_Ejemplo.ipynb` | Notebook principal para Google Colab / Jupyter |
+| `codigo_bolivia_clustering.py` | Mismo ejemplo como script de Python (para correr en PC) |
+| `coordenadas_bolivia_1000_puntos.txt` | Dataset: 1,000 localidades de Bolivia con coordenadas y demanda anual en pallets |
+| `requirements.txt` | Librerías necesarias para el script |
 
 ## 🚀 Cómo usarlo en Google Colab
 
@@ -18,13 +20,22 @@ Ejemplo didáctico de **Machine Learning aplicado a logística**: ubicación de 
 2. Ejecuta todas las celdas (**Entorno de ejecución → Ejecutar todas**).
 3. El notebook descarga el dataset automáticamente desde este repositorio; no necesitas subir ningún archivo.
 
-## 🧠 Metodología
+## 💻 Cómo usarlo en tu PC (script)
+
+```bash
+pip install -r requirements.txt
+python codigo_bolivia_clustering.py
+```
+
+El script genera: `codo_bolivia.png` (método del codo), `asignaciones_bolivia.csv` (quién atiende a quién) y `mapa_bolivia_cds.html` (mapa interactivo).
+
+## 🧠 Metodología (Clustering)
 
 1. **Carga de datos**: 1,000 localidades bolivianas con latitud, longitud y demanda anual (pallets).
 2. **Método del codo**: estimación del número óptimo de clusters (K).
 3. **K-Means ponderado**: la demanda entra como `sample_weight` — los puntos con más pallets "jalan" más el centro del cluster.
 4. **Distancias Haversine**: distancias reales en km sobre la superficie terrestre.
-5. **Mapa interactivo (Folium)**: clientes, clusters y centros de distribución.
+5. **Mapa interactivo (Folium)**: clientes, clusters y centros de distribución de Bolivia.
 
 ## 📊 Resultado esperado
 
